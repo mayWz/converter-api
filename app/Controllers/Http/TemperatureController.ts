@@ -3,8 +3,7 @@ import TemperatureConvertValidator from 'App/Validators/TemperatureConvertValida
 
 export default class TemperatureController {
   public async convert ({ request, response }) {
-    await request.validate(TemperatureConvertValidator)
-    const { from, to, value } = request.all()
+    const { from, to, value } = await request.validate(TemperatureConvertValidator)
 
     try {
       const data = TemperatureService.temperatureConvert(from, to, value)

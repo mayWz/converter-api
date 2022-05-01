@@ -1,8 +1,8 @@
 export namespace TemperatureEnum
 {
   export enum Unit {
-    KELVIN = 'kelvin',
-    CELSIUS = 'celsius',
-    FEHRENHEIT = 'fehrenheit',
+    kelvin = 'kelvin',
+    celsius = 'celsius',
+    fehrenheit = 'fahrenheit',
   }
 }

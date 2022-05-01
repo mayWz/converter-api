@@ -6,9 +6,10 @@ export namespace TemperatureService {
   export const temperatureConvert = (from: TemperatureEnum.Unit, to: TemperatureEnum.Unit, value: number)
   : TemperatureType.ConvertResponseT => {
     const convertValue = convert(value, from).to(to)
+    value = Math.round(convertValue)
     return {
       unit: to,
-      value: convertValue,
+      value: value,
     }
   }
 }
